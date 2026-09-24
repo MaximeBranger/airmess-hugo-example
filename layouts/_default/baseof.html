@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} – {{ site.Title }}{{ end }}</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 3rem auto; padding: 0 1rem; }
+    form { display: grid; gap: .5rem; }
+    input, textarea, button { font: inherit; padding: .5rem; }
+  </style>
+</head>
+<body>
+  <nav><a href="{{ "/" | relURL }}">Accueil</a> · <a href="{{ "contact/" | relURL }}">Contact</a></nav>
+  <main>
+    <h1>{{ .Title }}</h1>
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>

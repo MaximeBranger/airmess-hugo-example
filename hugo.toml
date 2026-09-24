@@ -1,0 +1,6 @@
+baseURL = "https://example.org/"
+languageCode = "fr-FR"
+title = "Exemple AirMess pour Hugo"
+
+[params.airmess]
+  formUrl = "https://airmess.fr/f/VOTRE_ID"
